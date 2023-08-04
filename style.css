@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-head{
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem 0rem;
+}
+#dark_mood{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.section_area{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+input{
+    width: 35%;
+    padding: 0.9rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+.dark{
+    display: flex;
+}
+.selection_area{
+    width: 20%;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+#country_list{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+ width: 21%;
+ height: 45vh;
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ margin: 1rem;
+ box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+ border-radius: 0.5rem;
+ overflow: hidden;
+}
+.card-body{
+    padding: 0rem 1rem;
+}
+.card img{
+    width: 100%;
+    height: 22vh;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.card-body h3{
+    margin-top: 1rem;
+}
+.card-text{
+    margin-top: 1rem;
+}
+.card-body p{
+    margin-top: 0.5rem;
+}
+@media (max-width:1093px){
+    .card{
+        width: 26%;
+        height: 50vh;
+    }
+}
+@media (max-width:800px){
+    .card{
+        width: 40%;
+        height: 53vh;
+    }
+    .card img{
+        height: 25vh;
+    }
+}
+@media (max-width:650px){
+    .card{
+        width: 40%;
+    }
+    .section_area{
+        flex-direction: column;
+    }
+    input{
+        width: 50%;
+    }
+    .selection_area{
+        margin-top: 1rem;
+        width: 35%;
+    }
+}
+@media (max-width:520px){
+    .card{
+        width: 41%;
+    }
+}
+@media (max-width:500px){
+    .card{
+        width: 100%;
+        height: 65vh;
+    }
+    .card img{
+        height: 35vh;
+    }
+    input{
+        width: 100%;
+    }
+    .selection_area{
+        margin-top: 1rem;
+        width: 70%;
+    }
+}
