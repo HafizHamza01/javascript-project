@@ -11,13 +11,9 @@ toogle.addEventListener("click", function () {
   if (this.classList.toggle("bi-brightness-high-fill")) {
     body.style.background = "white";
     body.style.color = "black";
-    select_background.style.background = "white";
-    select_background.style.color = "black";
   } else {
     body.style.background = "grey";
     body.style.color = "white";
-    select_background.style.background = "grey";
-    select_background.style.color = "white";
   }
 });
 
@@ -127,30 +123,9 @@ searchbar.addEventListener("keyup", (e) => {
   });
   country_list.innerHTML = filteredSearch;
 });
+
 // Select/option Area.
 function handle_select_value() {
-  searchbar.addEventListener("keyup", (e) => {
-    const value = e.target.value.toLowerCase();
-    const filtered_Array = filter_region.filter(
-      (item) => item.country.toLowerCase().search(value) != -1
-    );
-    let filtered_Search = filtered_Array.map((data) => {
-      return `<div class="card">
-             <img src=${data.image}  alt="please wait...">
-          <div class="card-body">
-          <h3 class="country_name">${data.country}</h3>
-          <div class="card-text">
-            <p class="card_population">Population:${data.population}</p>
-            <p class="card_rigion">Region:${data.region}</p>
-            <p class="card_capital">Capital:${data.capital}</p>
-            </div>
-          </div>
-        </div>
-  `;
-    });
-    country_list.innerHTML = filtered_Search;
-  });
-  //
   const selected_region = document.getElementById("select").value; 
     const filter_region = data.filter((item) => selected_region === "Filter_by_region"? item : item.region === selected_region );
     console.log(filter_region);
